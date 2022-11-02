@@ -17,7 +17,7 @@ static std::string vstrprintf(const char* format, va_list vlist)
 	assert(bytes_needed >= 0);
 	std::string str;
 	str.resize(bytes_needed + 1);
-	vsnprintf(&str[0], bytes_needed, format, vlist);
+	vsnprintf(&str[0], bytes_needed+1, format, vlist);
 	str.resize(bytes_needed); // Remove final '\0'
 	return str;
 #else
