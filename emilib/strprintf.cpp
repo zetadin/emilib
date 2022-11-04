@@ -7,6 +7,7 @@
 #include "strprintf.hpp"
 
 #include <cassert>
+#include <stdarg.h>
 
 namespace emilib {
 
